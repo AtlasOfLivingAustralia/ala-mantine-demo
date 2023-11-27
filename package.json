@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:clean": "rm -r .next && yarn && next dev",
     "build": "next build",
     "analyze": "ANALYZE=true next build",
     "start": "next start",
@@ -23,6 +24,7 @@
     "@mantine/hooks": "7.2.2",
     "@next/bundle-analyzer": "^14.0.1",
     "@tabler/icons-react": "^2.40.0",
+    "ala-mantine": "file:.yalc/ala-mantine",
     "next": "14.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"

@@ -5595,6 +5595,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ala-mantine@file:.yalc/ala-mantine::locator=mantine-next-template%40workspace%3A.":
+  version: 0.0.1
+  resolution: "ala-mantine@file:.yalc/ala-mantine#.yalc/ala-mantine::hash=8d4be3&locator=mantine-next-template%40workspace%3A."
+  peerDependencies:
+    "@mantine/core": ^7.2.0
+    react: ^18.2.0
+    react-dom: ^18.2.0
+  checksum: e26d01bc8270117b2b3bb4888df82e4d742311d649eaa8bb4979091eaef010318803c1061ecd88475435bdf3a54d56c9d0a5ef8463f28267a5f5704bfc1bea3d
+  languageName: node
+  linkType: hard
+
 "ansi-escapes@npm:^4.2.1":
   version: 4.3.2
   resolution: "ansi-escapes@npm:4.3.2"
@@ -11362,6 +11373,7 @@ __metadata:
     "@types/react": "npm:18.2.34"
     "@typescript-eslint/eslint-plugin": "npm:^6.9.1"
     "@typescript-eslint/parser": "npm:^6.9.1"
+    ala-mantine: "file:.yalc/ala-mantine"
     babel-loader: "npm:^9.1.3"
     eslint: "npm:^8.53.0"
     eslint-config-airbnb: "npm:19.0.4"
