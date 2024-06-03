@@ -18,8 +18,21 @@ export default function DemoPage() {
     <>
       <Title>Demos</Title>
       <Divider opacity={0.2} my="xl" />
+      <Title order={3} mb="xl">
+        Foundation Elements
+      </Title>
       <Grid>
-        {['buttons', 'tabs', 'cards', 'pagination'].map((link) => (
+        {['typography', 'links', 'tables', 'colours', 'logos', 'accordions'].map((link) => (
+          <GridCol key={link} span={4} px="md" pb="lg">
+            <DemoLink name={link} />
+          </GridCol>
+        ))}
+      </Grid>
+      <Title order={3} my="xl">
+        Components Guide
+      </Title>
+      <Grid>
+        {['buttons', 'calloutboxes'].map((link) => (
           <GridCol key={link} span={4} px="md" pb="lg">
             <DemoLink name={link} />
           </GridCol>

@@ -1,0 +1,5 @@
+.subheader {
+  @mixin light {
+    color: var(--mantine-color-grey-8);
+  }
+}
