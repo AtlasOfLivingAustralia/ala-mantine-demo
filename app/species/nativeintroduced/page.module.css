@@ -1,0 +1,5 @@
+.divider {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border-color: var(--mantine-color-light-grey-2);
+}

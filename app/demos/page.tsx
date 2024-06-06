@@ -32,7 +32,7 @@ export default function DemoPage() {
         Components Guide
       </Title>
       <Grid>
-        {['buttons', 'calloutboxes'].map((link) => (
+        {['buttons', 'calloutboxes', 'conservation'].map((link) => (
           <GridCol key={link} span={4} px="md" pb="lg">
             <DemoLink name={link} />
           </GridCol>

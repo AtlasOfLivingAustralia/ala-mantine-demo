@@ -66,7 +66,9 @@ export default function SpeciesClassification() {
                         my={selected ? 10 : 0}
                         style={{ borderRadius: 5 }}
                       >
-                        <Text fw="bold">{label}</Text>
+                        <Text fw="bold" w={83}>
+                          {label}
+                        </Text>
                         {value}
                       </Group>
                     </Group>

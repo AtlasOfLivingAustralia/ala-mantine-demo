@@ -9,6 +9,7 @@ const tabs = {
   classification: 'Classification',
   description: 'Description',
   media: 'Images and sounds',
+  names: 'Names',
   conservation: 'Conservation status',
   nativeintroduced: 'Native / introduced',
   traits: 'Traits',

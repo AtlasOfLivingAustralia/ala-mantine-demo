@@ -4,25 +4,20 @@ import {
   Stack,
   Image,
   Text,
-  Anchor,
   Divider,
   Grid,
   GridCol,
   Group,
   Button,
-  Center,
   Checkbox,
+  Radio,
+  RadioGroup,
 } from '@mantine/core';
 
 import NavTabs from '../_components/NavTabs';
 import classes from './page.module.css';
 
-import {
-  IconInfoCircleFilled,
-  IconArrowRight,
-  IconAdjustmentsHorizontal,
-  IconRefresh,
-} from '@tabler/icons-react';
+import { IconAdjustmentsHorizontal, IconRefresh } from '@tabler/icons-react';
 
 export default function SpeciesMedia() {
   return (
@@ -115,7 +110,10 @@ export default function SpeciesMedia() {
               </Group>
               <Divider className={classes.divider} />
               <Text fw="bold">Sort by</Text>
-              <Checkbox label="Occurrence sightings" />
+              <RadioGroup>
+                <Radio value="latest" label="Latest" />
+                <Radio mt={16} value="oldest" label="Oldest" />
+              </RadioGroup>
               <Divider className={classes.divider} />
               <Text fw="bold">Record type</Text>
               <Checkbox label="Occurrences" />

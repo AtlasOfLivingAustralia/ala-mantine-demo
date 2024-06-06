@@ -5194,12 +5194,12 @@ __metadata:
 
 "ala-mantine@file:.yalc/ala-mantine::locator=mantine-next-template%40workspace%3A.":
   version: 0.0.1
-  resolution: "ala-mantine@file:.yalc/ala-mantine#.yalc/ala-mantine::hash=1f26e6&locator=mantine-next-template%40workspace%3A."
+  resolution: "ala-mantine@file:.yalc/ala-mantine#.yalc/ala-mantine::hash=245b31&locator=mantine-next-template%40workspace%3A."
   peerDependencies:
     "@mantine/core": ^7.8.1
     react: ^18.2.0
     react-dom: ^18.2.0
-  checksum: 2d0ffe39e4e618d4a1c83f385737c9a0db9d16c1eeaec08c1eb47cee469fa255296c39107ef45ecdaa29cfba68bc5cff40d8047e938ade1f76aacf00ce301cd3
+  checksum: 351eff46c31a8265b2f2914e10aec807da229a8af642ebf6e8ea9bafd181553df765320ed574642a2feb6c81660fe14990c31cdf82fcb59582b5e8041afac06a
   languageName: node
   linkType: hard
 
