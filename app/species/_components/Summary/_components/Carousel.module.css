@@ -1,0 +1,15 @@
+.control {
+  width: 32px;
+  height: 32px;
+  transition: width 250ms ease;
+  background-color: black;
+  color: white;
+
+  &[data-active] {
+    width: 40px;
+  }
+
+  &:first-of-type {
+    opacity: 0;
+  }
+}

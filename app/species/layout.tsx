@@ -1,6 +1,4 @@
-import { Box, Group, Container } from '@mantine/core';
-
-import SpeciesPageHeader from './_components/Header';
+import { Box, Center } from '@mantine/core';
 import { ColorSchemeToggle } from '@/components/ColorSchemeToggle/ColorSchemeToggle';
 
 import { Header } from 'ala-mantine';
@@ -11,9 +9,10 @@ export default function SpeciesPageLayout({ children }: { children: any }) {
   return (
     <>
       <Header>
-        <ColorSchemeToggle />
+        <Center h="100%">
+          <ColorSchemeToggle />
+        </Center>
       </Header>
-      <SpeciesPageHeader />
       <Box className={classes.content}>{children}</Box>
     </>
   );

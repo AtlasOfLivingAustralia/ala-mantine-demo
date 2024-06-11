@@ -1,0 +1,28 @@
+.header {
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-position: right -150px top 140px;
+  background-size: 454px 397px;
+
+  @mixin light {
+    background-color: var(--mantine-color-concrete-0);
+    background-image: url('../../../../public/logo/logo-back-light.svg');
+  }
+  @mixin dark {
+    background-color: var(--mantine-color-charcoal-9);
+    background-image: url('../../../../public/logo/logo-back-dark.svg');
+  }
+
+  /* Desktop Sizes */
+  @media (min-width: 48em) {
+    display: none;
+  }
+}
+
+.title {
+  font-style: italic;
+
+  @mixin dark {
+    color: var(--mantine-color-flamingo-4) !important;
+  }
+}

@@ -1,5 +1,7 @@
 import '@mantine/core/styles.css';
-import React, { Fragment } from 'react';
+import '@mantine/carousel/styles.css';
+
+import React from 'react';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 import { theme } from 'ala-mantine';
 

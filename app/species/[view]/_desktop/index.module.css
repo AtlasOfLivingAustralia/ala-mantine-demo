@@ -1,0 +1,6 @@
+.desktop {
+  /* Mobile Sizes */
+  @media (max-width: calc(48em - 1px)) {
+    display: none;
+  }
+}
