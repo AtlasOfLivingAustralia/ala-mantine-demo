@@ -1,9 +1,9 @@
 'use client';
 
-import { Image, rem } from '@mantine/core';
+import { Image } from '@mantine/core';
 import { Carousel, CarouselProps, CarouselSlide } from '@mantine/carousel';
 
-import classes from './carousel.module.css';
+import classes from './Carousel.module.css';
 
 interface SpeciesCarouselProps extends CarouselProps {
   images: string[];
