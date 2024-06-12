@@ -15,7 +15,7 @@ import {
 } from '@mantine/core';
 import { IconInfoCircleFilled } from '@tabler/icons-react';
 
-import { ConservationStatus, ConservationStatusKey } from 'ala-mantine';
+import { ConservationStatus, ConservationStatusKey } from '../../../../../ala-mantine';
 
 export default function SpeciesConservation() {
   return (

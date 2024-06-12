@@ -1,6 +1,5 @@
 import { Fragment } from 'react';
 import { Title, Text, Stack, TitleOrder } from '@mantine/core';
-import { theme } from 'ala-mantine';
 
 const fontWeightToName: { [key: number]: string } = {
   100: 'Thin',

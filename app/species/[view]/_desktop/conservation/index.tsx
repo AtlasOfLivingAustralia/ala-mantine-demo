@@ -15,7 +15,7 @@ import {
 } from '@mantine/core';
 import { IconInfoCircleFilled } from '@tabler/icons-react';
 
-import { ConservationStatus } from 'ala-mantine';
+import { ConservationStatus, ConservationStatusKey } from '../../../../../ala-mantine';
 
 export default function SpeciesConservation() {
   return (
@@ -73,7 +73,7 @@ export default function SpeciesConservation() {
         <Grid mt={30}>
           {['EX', 'EW', 'CR', 'EN', 'VU', 'NT', 'LC'].map((status) => (
             <GridCol key={status} span={4}>
-              <ConservationStatus status={status as any} withLabel />
+              <ConservationStatus status={status as ConservationStatusKey} withLabel />
             </GridCol>
           ))}
         </Grid>

@@ -1,5 +1,5 @@
 import { Title, Divider, Stack } from '@mantine/core';
-import { ConservationStatus, ConservationStatusKey } from 'ala-mantine';
+import { ConservationStatus, ConservationStatusKey } from '../../../ala-mantine';
 
 const statusKeys = ['EX', 'EW', 'CR', 'EN', 'VU', 'NT', 'LC'];
 

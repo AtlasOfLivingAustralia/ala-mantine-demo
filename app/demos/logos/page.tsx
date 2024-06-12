@@ -1,5 +1,5 @@
 import { Title, Stack } from '@mantine/core';
-import { AtlasLogo, AusTraitsLogo } from 'ala-mantine';
+import { AtlasLogo, AusTraitsLogo } from '../../../ala-mantine';
 
 export default function LogoDemoPage() {
   return (

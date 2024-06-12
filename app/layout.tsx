@@ -3,7 +3,7 @@ import '@mantine/carousel/styles.css';
 
 import React from 'react';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
-import { theme } from 'ala-mantine';
+import { theme } from '../ala-mantine';
 
 export const metadata = {
   title: 'Mantine Next.js template',

@@ -16,7 +16,7 @@ import {
 } from '@mantine/core';
 
 import { IconInfoCircleFilled } from '@tabler/icons-react';
-import { AusTraitsLogo } from 'ala-mantine';
+import { AusTraitsLogo } from '../../../../../ala-mantine';
 
 const data = {
   numeric_traits: [

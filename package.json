@@ -26,7 +26,6 @@
     "@mantine/hooks": "7.10.1",
     "@next/bundle-analyzer": "^14.2.3",
     "@tabler/icons-react": "^3.3.0",
-    "ala-mantine": "file:.yalc/ala-mantine",
     "embla-carousel-react": "^7.1.0",
     "next": "14.2.3",
     "react": "18.3.1",

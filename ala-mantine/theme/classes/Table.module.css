@@ -1,0 +1,39 @@
+.table {
+  table-layout: fixed;
+}
+
+.tr[data-striped="odd"] {
+  &:nth-child(odd) {
+    @mixin light {
+      background-color: var(--mantine-color-concrete-0);
+    }
+    @mixin dark {
+      background-color: var(--mantine-color-dark-grey-two-9);
+    }
+  }
+}
+
+.tr[data-striped="even"] {
+  &:nth-child(even) {
+    @mixin light {
+      background-color: var(--mantine-color-concrete-0);
+    }
+    @mixin dark {
+      background-color: var(--mantine-color-dark-grey-two-9);
+    }
+  }
+}
+
+.td :global(.mantine-Anchor-root) {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+.thead {
+  @mixin light {
+    border-bottom: 1px solid var(--mantine-color-charcoal-9);
+  }
+  @mixin dark {
+    border-bottom: 1px solid white;
+  }
+}

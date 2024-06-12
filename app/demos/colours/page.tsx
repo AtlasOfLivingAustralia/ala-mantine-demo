@@ -1,5 +1,5 @@
 import { Title, Text, Stack, Box, Group } from '@mantine/core';
-import { mainShades, theme } from 'ala-mantine';
+import { mainShades, theme } from '../../../ala-mantine';
 
 function capitalizeFirstLetter(string: string) {
   return string.charAt(0).toUpperCase() + string.slice(1);

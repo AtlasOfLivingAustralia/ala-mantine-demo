@@ -12,5 +12,5 @@ export default withBundleAnalyzer({
   experimental: {
     optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
   },
-  transpilePackages: ['ala-mantine'],
+  // transpilePackages: ['../ala-mantine'],
 });

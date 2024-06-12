@@ -1,6 +1,6 @@
-import { Container, Anchor, Title, Stack, Text, Space } from '@mantine/core';
+import { Anchor, Title, Stack, Text, Space } from '@mantine/core';
 
-import { LiteratureCard } from 'ala-mantine';
+import { LiteratureCard } from '../../../../../ala-mantine';
 
 export default function SpeciesConservation() {
   return (
