@@ -77,7 +77,8 @@ export default function SpeciesPageMobile({ view }: { view: string }) {
   }, [desktop, toNavigate]);
 
   return (
-    <Stack gap={5} className={classes.mobile}>
+    <div className={classes.mobile}>
+      <Stack gap={5}>
       {Object.entries(views).map(([key, value]) => (
         <Accordion
           key={key}
@@ -100,5 +101,6 @@ export default function SpeciesPageMobile({ view }: { view: string }) {
         </Accordion>
       ))}
     </Stack>
+    </div>
   );
 }
