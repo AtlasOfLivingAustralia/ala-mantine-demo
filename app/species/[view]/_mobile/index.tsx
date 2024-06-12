@@ -67,7 +67,7 @@ const views: Record<string, { view: ReactElement; name: string }> = {
 export default function SpeciesPageMobile({ view }: { view: string }) {
   const router = useRouter();
   const desktop = useMediaQuery('(min-width: 56.25em)');
-  const [toNavigate, setToNavigate] = useState<boolean>(null);
+  const [toNavigate, setToNavigate] = useState<string|null>(null);
 
   useEffect(() => {
     if (desktop && toNavigate) {

@@ -1,7 +1,5 @@
 import { redirect } from 'next/navigation';
 
-export default function SpeciesPage({ children }) {
-  redirect('/species/occurrence');
-
-  return children;
+export default function SpeciesPage() {
+  redirect('/species/occurrence');;
 }

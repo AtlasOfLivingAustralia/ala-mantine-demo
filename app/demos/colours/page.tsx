@@ -1,7 +1,7 @@
 import { Title, Text, Stack, Box, Group } from '@mantine/core';
 import { mainShades, theme } from 'ala-mantine';
 
-function capitalizeFirstLetter(string) {
+function capitalizeFirstLetter(string: string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
@@ -20,7 +20,7 @@ function ColourSwatch({ name, shade }: ColourSwatchProps) {
           .map((part) => capitalizeFirstLetter(part))
           .join(' ')}
       </Title>
-      <Text mt={5}>{theme.colors[name][shade]}</Text>
+      <Text mt={5}>{theme.colors?.[name]?.[shade]}</Text>
     </div>
   );
 }

@@ -6,6 +6,7 @@
     "dev": "next dev",
     "dev:clean": "rm -r .next && yarn && next dev",
     "build": "next build",
+    "build:fresh": "rm -r .next && yarn && next build",
     "analyze": "ANALYZE=true next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
@@ -71,6 +72,5 @@
     "stylelint-config-standard-scss": "^13.1.0",
     "ts-jest": "^29.1.2",
     "typescript": "5.4.5"
-  },
-  "packageManager": "yarn@4.0.1"
+  }
 }

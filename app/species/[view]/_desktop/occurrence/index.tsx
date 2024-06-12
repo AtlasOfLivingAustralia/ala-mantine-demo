@@ -29,7 +29,7 @@ export default function SpeciesOccurrence() {
     <>
       <Container size="lg">
         <Group>
-          <Alert may={324} icon={<IconFlagFilled size={14} />}>
+          <Alert icon={<IconFlagFilled size={14} />}>
             This species is considered sensitive in at least one jurisdiction. Some or all
             occurrence data has been obfuscated. <Anchor>More info</Anchor>
           </Alert>

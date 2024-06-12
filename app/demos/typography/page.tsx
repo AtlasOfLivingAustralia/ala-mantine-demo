@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
-import { Title, Text, Stack } from '@mantine/core';
-import { mobile as theme } from 'ala-mantine';
+import { Title, Text, Stack, TitleOrder } from '@mantine/core';
+import { theme } from 'ala-mantine';
 
 const fontWeightToName: { [key: number]: string } = {
   100: 'Thin',
@@ -22,11 +22,11 @@ export default function TypographyDemoPage() {
           <Title order={4} c="rust.6" mt={order !== 1 ? 'xl' : 0}>
             Heading {order} style
           </Title>
-          <Title order={order}>
+          <Title order={order as TitleOrder}>
             Heading {order} Roboto{' '}
             {/* {fontWeightToName[theme.headings.sizes[`h${order}`].fontWeight]} */}
           </Title>
-          <Title key={order} order={order} fs="italic">
+          <Title key={order} order={order as TitleOrder} fs="italic">
             Heading {order} Roboto{' '}
             {/* {fontWeightToName[theme.headings.sizes[`h${order}`].fontWeight]} italic */}
           </Title>

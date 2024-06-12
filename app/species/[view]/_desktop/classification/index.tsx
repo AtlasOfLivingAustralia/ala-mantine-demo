@@ -57,7 +57,7 @@ export default function SpeciesClassification() {
                   {items.map(({ label, value, selected }, index) => (
                     <Group key={`${label}-${index}`}>
                       <Group
-                        className={selected ? classes.highlighted : []}
+                        className={selected ? classes.highlighted : undefined}
                         pl={12}
                         pr={selected ? 12 : 0}
                         py={5}

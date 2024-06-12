@@ -9,7 +9,7 @@ export default function Summary({ view }: SummaryProps) {
   return (
     <>
       <Desktop view={view} />
-      <Mobile view={view} />
+      <Mobile />
     </>
   );
 }

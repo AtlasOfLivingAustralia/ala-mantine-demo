@@ -1,7 +1,7 @@
 import { Alert, Box, Group, Container, Title, Text, Stack, Anchor } from '@mantine/core';
 
 import { IconChevronLeft, IconFlagFilled } from '@tabler/icons-react';
-import Carousel from './_components/carousel';
+import Carousel from './_components/Carousel';
 
 import classes from './mobile.module.css';
 
@@ -24,7 +24,7 @@ export default function SpeciesPageHeaderMobile() {
           <Text size="xl">Bandubugarri in Alawa</Text>
           <Anchor size="sm">See names</Anchor>
         </Stack>
-        <Text mt="xs" mt={20}>
+        <Text mt={20}>
           The emu is the second-tallest living bird after the ostrich, its ratite relative. It is
           endemic to Australia, where it is the largest native bird and the only extant member of
           the genus Dromaius.

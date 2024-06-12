@@ -1,5 +1,6 @@
+"use client";
 import { Container, Tabs, TabsList, TabsTab, Divider } from '@mantine/core';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 import classes from './NavTabs.module.css';
 
@@ -20,12 +21,14 @@ interface NavTabsProps {
 }
 
 export default function NavTabs({ view }: NavTabsProps) {
+  const router = useRouter();
+
   return (
-    <Tabs className={classes.background} value={view} mb={61}>
+    <Tabs className={classes.background} value={view} mb={61} onChange={(tab) => router.push(`/species/${tab}`)}>
       <Container size="lg">
         <TabsList>
           {Object.entries(tabs).map(([key, val]) => (
-            <TabsTab key={key} component={Link} href={key} value={key}>
+            <TabsTab key={key} value={key}>
               {val}
             </TabsTab>
           ))}

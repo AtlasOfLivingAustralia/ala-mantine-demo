@@ -17,7 +17,7 @@ import { IconChevronLeft, IconFlagFilled } from '@tabler/icons-react';
 import classes from './desktop.module.css';
 import NavTabs from './_components/NavTabs';
 
-export default function SpeciesPageHeaderDesktop({ view }) {
+export default function SpeciesPageHeaderDesktop({ view }: { view: string }) {
   return (
     <Box className={classes.header}>
       <Container py="lg" size="lg">

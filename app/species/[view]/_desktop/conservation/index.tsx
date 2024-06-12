@@ -73,7 +73,7 @@ export default function SpeciesConservation() {
         <Grid mt={30}>
           {['EX', 'EW', 'CR', 'EN', 'VU', 'NT', 'LC'].map((status) => (
             <GridCol key={status} span={4}>
-              <ConservationStatus status={status} withLabel />
+              <ConservationStatus status={status as any} withLabel />
             </GridCol>
           ))}
         </Grid>
