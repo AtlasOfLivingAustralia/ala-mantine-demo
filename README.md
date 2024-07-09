@@ -1,19 +1,18 @@
-# Mantine Next.js template
+# ALA Mantine Next.js Demo
+> A demonstration application for the [ala-mantine](https://github.com/AtlasOfLivingAustralia/ala-mantine) theming / component library.
 
-This is a template for [Next.js](https://nextjs.org/) app router + [Mantine](https://mantine.dev/).
-If you want to use pages router instead, see [next-pages-template](https://github.com/mantinedev/next-pages-template).
+## Getting Started
+### Yalc
+*There is a `no-yalc` branch that you can use to skip this step, however any updates to the ala-mantine package need to be manually copied over.*
 
-## Features
+[Yalc](https://github.com/wclr/yalc) is needed to use `ala-mantine` locally. See [here](https://github.com/wclr/yalc?tab=readme-ov-file#installation) for Yalc installation documentation. Once installed, in the `ala-mantine` root folder, run `yalc publish`.
 
-This template comes with the following features:
+In this application, run `yalc add ala-mantine`, followed by `yarn` to install it as a dependency.
 
-- [PostCSS](https://postcss.org/) with [mantine-postcss-preset](https://mantine.dev/styles/postcss-preset)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Storybook](https://storybook.js.org/)
-- [Jest](https://jestjs.io/) setup with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
-- ESLint setup with [eslint-config-mantine](https://github.com/mantinedev/eslint-config-mantine)
+Once you've made changes to `ala-mantine`, run `yalc push` from the `ala-mantine` root folder to automatically push all changes to the dependent applications.
 
-## npm scripts
+
+## Running
 
 ### Build and dev scripts
 
