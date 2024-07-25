@@ -1,76 +1,93 @@
+import { CodeHighlight } from '@mantine/code-highlight';
 import {
   Title,
-  Text,
   Stack,
-  Group,
   Divider,
   Button,
   Tabs,
   TabsList,
   TabsTab,
   TabsPanel,
+  Alert,
+  Anchor,
+  Box,
 } from '@mantine/core';
 
-import { IconArrowRight } from '@tabler/icons-react';
+import { ArrowRightIcon, InfoIcon } from 'ala-mantine';
+
+const generateButtonCode = (text: string, variant?: string) => (
+  <CodeHighlight
+    withCopyButton={false}
+    language="tsx"
+    code={`
+import { Button } from '@mantine/core';${variant ? '' : `\nimport { ArrowRightIcon } from 'ala-mantine';`}
+
+<Button ${variant ? `variant="${variant}"` : 'rightSection={<ArrowRightIcon size={14} />}'}>
+  ${text}
+</Button>`}
+  />
+);
+
+const subNavCode = `
+import { Tabs, TabsList, TabsPanel } from '@mantine/core';
+
+<Tabs h={80} defaultValue="tab1">
+  <TabsList>
+    <TabsTab value="tab1">Section title</TabsTab>
+    <TabsTab value="tab2">Section title</TabsTab>
+    <TabsTab value="tab3">Section title</TabsTab>
+  </TabsList>
+  <TabsPanel value="tab1">Section one</TabsPanel>
+  <TabsPanel value="tab2">Section two</TabsPanel>
+  <TabsPanel value="tab3">Section three</TabsPanel>
+</Tabs>`;
 
 export default function ButtonDemoPage() {
   return (
     <>
       <Title>Buttons</Title>
+      <Alert mt="lg" icon={<InfoIcon />} p="xs" variant="light" color="blue">
+        See the{' '}
+        <Anchor target="_blank" href="https://mantine.dev/core/button/" size="sm">
+          Button
+        </Anchor>{' '}
+        and{' '}
+        <Anchor target="_blank" href="https://mantine.dev/core/tabs/" size="sm">
+          Tabs
+        </Anchor>{' '}
+        Mantine documentation
+      </Alert>
       <Divider my="xl" />
-      <Stack mt="xs">
+      <Stack gap="xl">
         <Title order={4}>Primary</Title>
-        <Group>
-          <Text w={100}>Small</Text>
-          <Button w={225} rightSection={<IconArrowRight size={14} />}>
-            Primary button
-          </Button>
-        </Group>
-        <Group>
-          <Text w={100}>Large</Text>
-          <Button w={225} rightSection={<IconArrowRight size={14} />}>
-            Primary button
-          </Button>
-        </Group>
-        <Title order={4} my="xl">
-          Secondary
-        </Title>
-        <Group>
-          <Text w={100}>Small</Text>
-          <Button w={225} variant="ala-secondary">
-            Secondary button
-          </Button>
-        </Group>
-        <Group>
-          <Text w={100}>Large</Text>
-          <Button w={225} variant="ala-secondary">
-            Secondary button
-          </Button>
-        </Group>
-        <Title order={4} my="xl">
-          Filter
-        </Title>
-        <Group>
-          <Text w={100}>Small</Text>
-          <Button variant="ala-filter">Button</Button>
-        </Group>
-        <Group>
-          <Text w={100}>Large</Text>
-          <Button variant="ala-filter">Button</Button>
-        </Group>
-        <Title order={4} my="xl">
-          Sub-nav
-        </Title>
-        <Tabs h={125} defaultValue="tab1">
+        <Button w={225} rightSection={<ArrowRightIcon size={14} />}>
+          Primary button
+        </Button>
+        {generateButtonCode('Primary button')}
+        <Title order={4}>Secondary</Title>
+        <Button w={225} variant="ala-secondary">
+          Secondary button
+        </Button>
+        {generateButtonCode('Secondary button', 'ala-secondary')}
+        <Title order={4}>Filter</Title>
+        <Button w={225} variant="ala-filter">
+          Filter button
+        </Button>
+        {generateButtonCode('Filter button', 'ala-filter')}
+        <Title order={4}>Sub-nav</Title>
+        <Tabs h={80} defaultValue="tab1">
           <TabsList>
             <TabsTab value="tab1">Section title</TabsTab>
             <TabsTab value="tab2">Section title</TabsTab>
             <TabsTab value="tab3">Section title</TabsTab>
           </TabsList>
-          <TabsPanel value="tab1">Section one</TabsPanel>
-          <TabsPanel value="tab2">Section two</TabsPanel>
-          <TabsPanel value="tab3">Section three</TabsPanel>
+          <Box mt="sm">
+            <TabsPanel value="tab1">Section one</TabsPanel>
+            <TabsPanel value="tab2">Section two</TabsPanel>
+            <TabsPanel value="tab3">Section three</TabsPanel>
+          </Box>
         </Tabs>
+        <CodeHighlight language="tsx" withCopyButton={false} code={subNavCode} />
       </Stack>
     </>
   );

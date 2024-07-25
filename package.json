@@ -21,9 +21,10 @@
     "storybook:build": "storybook build"
   },
   "dependencies": {
-    "@mantine/carousel": "^7.10.1",
-    "@mantine/core": "7.10.1",
-    "@mantine/hooks": "7.10.1",
+    "@mantine/carousel": "^7.11.2",
+    "@mantine/code-highlight": "^7.11.2",
+    "@mantine/core": "7.11.2",
+    "@mantine/hooks": "7.11.2",
     "@next/bundle-analyzer": "^14.2.3",
     "@tabler/icons-react": "^3.3.0",
     "ala-mantine": "file:.yalc/ala-mantine",

@@ -8,7 +8,11 @@ import {
   TableTr,
   TableTh,
   TableTd,
+  Anchor,
+  Text,
+  Alert,
 } from '@mantine/core';
+import { InfoIcon } from 'ala-mantine';
 
 const rows = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
 
@@ -16,6 +20,13 @@ export default function TableDemoPage() {
   return (
     <>
       <Title>Links</Title>
+      <Alert mt="lg" icon={<InfoIcon />} p="xs" variant="light" color="blue">
+        See the{' '}
+        <Anchor target="_blank" href="https://mantine.dev/core/table/" size="sm">
+          Table
+        </Anchor>{' '}
+        Mantine documentation
+      </Alert>
       <Divider my="xl" />
       <Stack gap="xl">
         <Table>

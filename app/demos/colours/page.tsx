@@ -1,5 +1,5 @@
-import { Title, Text, Stack, Box, Group } from '@mantine/core';
-import { mainShades, theme } from 'ala-mantine';
+import { Title, Text, Stack, Box, Group, Code, Divider, Alert, Anchor } from '@mantine/core';
+import { InfoIcon, mainShades, theme } from 'ala-mantine';
 
 function capitalizeFirstLetter(string: string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
@@ -14,13 +14,15 @@ function ColourSwatch({ name, shade }: ColourSwatchProps) {
   return (
     <div>
       <Box w={157} h={100} bg={`${name}.${shade}`} style={{ borderRadius: 10 }} />
-      <Title order={3} pt="sm">
-        {name
-          .split('-')
-          .map((part) => capitalizeFirstLetter(part))
-          .join(' ')}
-      </Title>
-      <Text mt={5}>{theme.colors?.[name]?.[shade]}</Text>
+      <Group mt="md" align="center" justify="space-between">
+        <Text>
+          {name
+            .split('-')
+            .map((part) => capitalizeFirstLetter(part))
+            .join(' ')}
+        </Text>
+        <Code mt={5}>{theme.colors?.[name]?.[shade]}</Code>
+      </Group>
     </div>
   );
 }
@@ -31,9 +33,18 @@ const secondaryNames = ['concrete', 'silver', 'charcoal'];
 export default function ColourDemoPage() {
   return (
     <>
+      <Title>Colours</Title>
+      <Alert mt="lg" icon={<InfoIcon />} p="xs" variant="light" color="blue">
+        See the{' '}
+        <Anchor target="_blank" href="https://mantine.dev/theming/colors/" size="sm">
+          Colours
+        </Anchor>{' '}
+        Mantine documentation
+      </Alert>
+      <Divider my="xl" />
       <Stack mt="xs" gap="xl">
         <Stack gap="xl">
-          <Title order={2} pt="sm">
+          <Title order={4} pt="sm">
             Primary
           </Title>
           <Group gap="xl">
@@ -43,7 +54,7 @@ export default function ColourDemoPage() {
           </Group>
         </Stack>
         <Stack mt="xl" gap="xl">
-          <Title order={2} pt="sm">
+          <Title order={4} pt="sm">
             Secondary
           </Title>
           <Group gap="xl">
@@ -53,7 +64,7 @@ export default function ColourDemoPage() {
           </Group>
         </Stack>
         <Stack mt="xl" gap="xl">
-          <Title order={2} pt="sm">
+          <Title order={4} pt="sm">
             Extended
           </Title>
           <Group gap="xl">
