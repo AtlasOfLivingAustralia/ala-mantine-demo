@@ -1,5 +1,48 @@
-import { Title, Text, Divider, Grid, GridCol, Card } from '@mantine/core';
+import { Title, Text, Divider, Grid, GridCol, Card, Stack } from '@mantine/core';
+import { IconColorSwatch, IconTable, IconTypography } from '@tabler/icons-react';
 import Link from 'next/link';
+
+interface DemoLink {
+  name: string;
+  path: string;
+  icon: any;
+}
+
+const foundationLinks: DemoLink[] = [
+  {
+    path: 'colours',
+    name: 'Colours',
+    icon: IconColorSwatch,
+  },
+  {
+    path: 'tables',
+    name: 'Tables',
+    icon: IconTable,
+  },
+  {
+    path: 'typography',
+    name: 'Typography',
+    icon: IconTypography,
+  },
+];
+
+function FoundationLink({ link }: { link: DemoLink }) {
+  const { name, path, icon: Icon } = link;
+  return (
+    <Card
+      component={Link}
+      href={`/demos/${path}`}
+      radius="lg"
+      withBorder
+      style={{ borderStyle: 'dashed' }}
+    >
+      <Stack align="center">
+        <Icon size={42} />
+        <Text fw="bold">{name}</Text>
+      </Stack>
+    </Card>
+  );
+}
 
 interface DemoLinkProps {
   name: string;
@@ -22,9 +65,9 @@ export default function DemoPage() {
         Foundation Elements
       </Title>
       <Grid>
-        {['typography', 'links', 'tables', 'colours', 'logos', 'accordions'].map((link) => (
-          <GridCol key={link} span={4} px="md" pb="lg">
-            <DemoLink name={link} />
+        {foundationLinks.map((link) => (
+          <GridCol key={link.name} span={4} px="md" pb="lg">
+            <FoundationLink link={link} />
           </GridCol>
         ))}
       </Grid>
@@ -32,7 +75,16 @@ export default function DemoPage() {
         Components Guide
       </Title>
       <Grid>
-        {['buttons', 'calloutboxes', 'conservation', 'icons'].map((link) => (
+        {[
+          'accordions',
+          'buttons',
+          'calloutboxes',
+          'conservation',
+          'controls',
+          'icons',
+          'links',
+          'logos',
+        ].map((link) => (
           <GridCol key={link} span={4} px="md" pb="lg">
             <DemoLink name={link} />
           </GridCol>

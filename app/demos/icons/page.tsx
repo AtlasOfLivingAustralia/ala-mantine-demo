@@ -230,33 +230,48 @@ export default function IconsDemoPage() {
         <Title order={4}>Main</Title>
         <Grid>
           {icons.map(({ name, icon: Icon }) => (
-            <GridCol span={{ base: 6, xs: 4, sm: 3, lg: 2 }} key={name}>
-              <Group gap="xs">
-                <Icon />
-                <Text>{name}</Text>
-              </Group>
+            <GridCol span={{ base: 12, sm: 6, xl: 4 }} key={name}>
+              <Stack>
+                <Group justify="space-between">
+                  <Group gap="xs">
+                    <Icon />
+                    <Text>{name}</Text>
+                  </Group>
+                  <Code>{`<${Icon.name} />`}</Code>
+                </Group>
+              </Stack>
             </GridCol>
           ))}
         </Grid>
         <Title order={4}>Alerts</Title>
         <Grid>
           {alerts.map(({ name, icon: Icon }) => (
-            <GridCol span={{ base: 6, xs: 4, sm: 3, lg: 2 }} key={name}>
-              <Group gap="xs">
-                <Icon />
-                <Text>{name}</Text>
-              </Group>
+            <GridCol span={{ base: 12, sm: 6, xl: 4 }} key={name}>
+              <Stack>
+                <Group justify="space-between">
+                  <Group gap="xs">
+                    <Icon />
+                    <Text>{name}</Text>
+                  </Group>
+                  <Code>{`<${Icon.name} />`}</Code>
+                </Group>
+              </Stack>
             </GridCol>
           ))}
         </Grid>
         <Title order={4}>Search Types</Title>
         <Grid>
           {searchTypes.map(({ name, icon: Icon }) => (
-            <GridCol span={{ base: 6, xs: 4, sm: 4, lg: 3 }} key={name}>
-              <Group gap="xs">
-                <Icon color="grey" />
-                <Text>{name}</Text>
-              </Group>
+            <GridCol span={{ base: 12, sm: 12, md: 6, xl: 4 }} key={name}>
+              <Stack>
+                <Group justify="space-between">
+                  <Group gap="xs">
+                    <Icon color="grey" />
+                    <Text>{name}</Text>
+                  </Group>
+                  <Code>{`<${Icon.name} />`}</Code>
+                </Group>
+              </Stack>
             </GridCol>
           ))}
         </Grid>
@@ -268,11 +283,12 @@ export default function IconsDemoPage() {
         </Text>
         <Grid>
           {quicklinks.map(({ name, icon: Icon }) => (
-            <GridCol span={{ base: 12, xs: 4, sm: 3 }} key={name}>
-              <Group gap="xs">
+            <GridCol span={{ base: 6, xs: 6, sm: 4, md: 3 }} key={name}>
+              <Stack gap="xs" align="center">
                 <Icon />
                 <Text>{name}</Text>
-              </Group>
+                <Code>{`<${Icon.name} />`}</Code>
+              </Stack>
             </GridCol>
           ))}
         </Grid>
