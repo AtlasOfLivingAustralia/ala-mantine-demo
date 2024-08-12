@@ -11,9 +11,10 @@ import {
   Alert,
   Anchor,
   Box,
+  Group,
 } from '@mantine/core';
 
-import { ArrowRightIcon, InfoIcon } from 'ala-mantine';
+import { ArrowRightIcon, InfoIcon, SearchIcon } from 'ala-mantine';
 
 const generateButtonCode = (text: string, variant?: string) => (
   <CodeHighlight
@@ -60,19 +61,19 @@ export default function ButtonDemoPage() {
       <Divider my="xl" />
       <Stack gap="xl">
         <Title order={4}>Primary</Title>
-        <Button w={225} rightSection={<ArrowRightIcon size={14} />}>
-          Primary button
+        <Button w={255} leftSection={<SearchIcon size={14} />}>
+          Primary button that is very long
         </Button>
         {generateButtonCode('Primary button')}
         <Title order={4}>Secondary</Title>
-        <Button w={225} variant="ala-secondary">
+        <Button w={255} variant="ala-secondary">
           Secondary button
         </Button>
         {generateButtonCode('Secondary button', 'ala-secondary')}
         <Title order={4}>Filter</Title>
-        <Button w={225} variant="ala-filter">
-          Filter button
-        </Button>
+        <Group>
+          <Button variant="ala-filter">Filter button</Button>
+        </Group>
         {generateButtonCode('Filter button', 'ala-filter')}
         <Title order={4}>Sub-nav</Title>
         <Tabs h={80} defaultValue="tab1">

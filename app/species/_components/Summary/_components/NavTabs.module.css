@@ -1,6 +1,6 @@
 .background {
   @mixin light {
-    background-color: var(--mantine-color-concrete-0);
+    background-color: white;
   }
   @mixin dark {
     background-color: var(--mantine-color-charcoal-9);

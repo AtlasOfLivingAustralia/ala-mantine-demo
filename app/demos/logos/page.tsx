@@ -1,6 +1,6 @@
 import { CodeHighlight } from '@mantine/code-highlight';
 import { Title, Stack, Divider, Text } from '@mantine/core';
-import { AtlasLogo, AusTraitsLogo } from 'ala-mantine';
+import { AtlasLogo, AusTraitsLogo, CsiroLogo, GbifLogo, NcrisLogo } from 'ala-mantine';
 
 const generateLogoCode = (logo: string) => (
   <CodeHighlight
@@ -30,6 +30,15 @@ export default function LogoDemoPage() {
         <Title order={5}>AusTraits</Title>
         <AusTraitsLogo />
         {generateLogoCode('AusTraitsLogo')}
+        <Title order={5}>CSIRO</Title>
+        <CsiroLogo />
+        {generateLogoCode('Csiro')}
+        <Title order={5}>GBIF</Title>
+        <GbifLogo />
+        {generateLogoCode('Gbif')}
+        <Title order={5}>NCRIS</Title>
+        <NcrisLogo />
+        {generateLogoCode('Ncris')}
       </Stack>
     </>
   );
