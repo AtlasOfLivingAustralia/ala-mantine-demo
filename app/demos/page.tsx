@@ -5,7 +5,7 @@ import Link from 'next/link';
 interface DemoLink {
   name: string;
   path: string;
-  icon: any;
+  icon?: any;
 }
 
 const foundationLinks: DemoLink[] = [
@@ -44,14 +44,53 @@ function FoundationLink({ link }: { link: DemoLink }) {
   );
 }
 
+const demoLinks = [
+  {
+    path: 'accordions',
+    name: 'Accordions',
+  },
+  {
+    path: 'buttons',
+    name: 'Buttons',
+  },
+  {
+    path: 'calloutboxes',
+    name: 'Callout Boxes',
+  },
+  {
+    path: 'conservation',
+    name: 'Conservation Status',
+  },
+  {
+    path: 'controls',
+    name: 'Controls',
+  },
+  {
+    path: 'icons',
+    name: 'Icons',
+  },
+  {
+    path: 'links',
+    name: 'Links',
+  },
+  {
+    path: 'logos',
+    name: 'Logos',
+  },
+  {
+    path: 'headerfooter',
+    name: 'Header & Footer',
+  },
+];
+
 interface DemoLinkProps {
-  name: string;
+  link: DemoLink;
 }
 
-function DemoLink({ name }: DemoLinkProps) {
+function DemoLink({ link }: DemoLinkProps) {
   return (
-    <Card component={Link} href={`/demos/${name}`} shadow="sm" radius="md" withBorder>
-      <Text>{name}</Text>
+    <Card component={Link} href={`/demos/${link.path}`} shadow="sm" radius="md" withBorder>
+      <Text>{link.name}</Text>
     </Card>
   );
 }
@@ -75,18 +114,9 @@ export default function DemoPage() {
         Components Guide
       </Title>
       <Grid>
-        {[
-          'accordions',
-          'buttons',
-          'calloutboxes',
-          'conservation',
-          'controls',
-          'icons',
-          'links',
-          'logos',
-        ].map((link) => (
-          <GridCol key={link} span={4} px="md" pb="lg">
-            <DemoLink name={link} />
+        {demoLinks.map((link) => (
+          <GridCol key={link.path} span={4} px="md" pb="lg">
+            <DemoLink link={link} />
           </GridCol>
         ))}
       </Grid>

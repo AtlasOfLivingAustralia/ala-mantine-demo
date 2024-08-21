@@ -19,7 +19,7 @@ const rows = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'n
 export default function TableDemoPage() {
   return (
     <>
-      <Title>Links</Title>
+      <Title>Tables</Title>
       <Alert mt="lg" icon={<InfoIcon />} p="xs" variant="light" color="blue">
         See the{' '}
         <Anchor target="_blank" href="https://mantine.dev/core/table/" size="sm">

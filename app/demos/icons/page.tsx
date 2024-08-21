@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import { CodeHighlight } from '@mantine/code-highlight';
 
-import { Title, Text, Stack, Group, Divider, Code, Grid, GridCol } from '@mantine/core';
+import { Title, Text, Stack, Group, Divider, Code, Grid, GridCol, Anchor } from '@mantine/core';
 
 import {
   ALAGeneralContentIcon,
@@ -41,6 +41,7 @@ import {
   TickIcon,
   TilesIcon,
   WorldIcon,
+  ThemeIcon,
 } from 'ala-mantine';
 
 interface DemoIcon {
@@ -128,6 +129,10 @@ const icons: DemoIcon[] = [
   {
     name: 'Tiles',
     icon: TilesIcon,
+  },
+  {
+    name: 'Theme',
+    icon: ThemeIcon,
   },
 ];
 
@@ -227,6 +232,13 @@ export default function IconsDemoPage() {
           Icons assume the color of their surrounding text/content (supporting light/dark theme out
           of the box), and include a handy <Code>size</Code> prop for resizing.
         </Text>
+        <Text>
+          Any additional icons missing from the ALA provided ones should be backfilled using{' '}
+          <Anchor href="https://docs.fontawesome.com/v5/web/use-with/react" target="_blank">
+            Font Awesome
+          </Anchor>{' '}
+          icons.
+        </Text>
         <Title order={4}>Main</Title>
         <Grid>
           {icons.map(({ name, icon: Icon }) => (
@@ -281,7 +293,7 @@ export default function IconsDemoPage() {
           rather, render a different light/dark variant depending on the theme. These icons are
           dynamically sized based on whether the page's size (mobile/desktop).
         </Text>
-        <Grid>
+        <Grid mb="xl" pb="xl">
           {quicklinks.map(({ name, icon: Icon }) => (
             <GridCol span={{ base: 6, xs: 6, sm: 4, md: 3 }} key={name}>
               <Stack gap="xs" align="center">
