@@ -26,7 +26,6 @@ import { Header, Footer, IndigenousAcknowledgement } from 'ala-mantine';
   <Header
     onAuthClick={/* auth button callback */}
     onSearchClick={/* search button callback */}
-    onThemeToggleClick={/* theme toggle callback */}
     isAuthenticated={/* option flag to render login/logout button */}
   />
   {/* app content */}
