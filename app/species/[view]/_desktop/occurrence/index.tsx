@@ -61,7 +61,7 @@ export default function SpeciesOccurrence() {
               <Button w={255} h="auto" size="md" rightSection={<IconArrowRight size={18} />}>
                 Explore and download occurrence records
               </Button>
-              <Button w={255} h={54} size="md" rightSection={<IconArrowRight size={18} />}>
+              <Button w={255} h={69} size="md" rightSection={<IconArrowRight size={18} />}>
                 Advanced mapping
               </Button>
               <Button w={255} h="auto" size="md" rightSection={<IconArrowRight size={18} />}>

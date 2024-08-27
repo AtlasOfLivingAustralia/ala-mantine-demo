@@ -115,7 +115,7 @@ export default function DemoPage() {
       </Title>
       <Grid>
         {demoLinks.map((link) => (
-          <GridCol key={link.path} span={4} px="md" pb="lg">
+          <GridCol key={link.path} span={{ base: 12, sm: 6, md: 4, lg: 3 }} px="md" pb="lg">
             <DemoLink link={link} />
           </GridCol>
         ))}

@@ -12,7 +12,7 @@ export default function SpeciesPageLayout({ children }: { children: any }) {
 
   return (
     <>
-      <Header onThemeToggleClick={toggleColorScheme} />
+      <Header />
       <Box className={classes.content}>{children}</Box>
       <Footer />
       <IndigenousAcknowledgement />

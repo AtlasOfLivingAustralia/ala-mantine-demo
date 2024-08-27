@@ -1,10 +1,13 @@
-import { Group, Text, Container, UnstyledButton } from '@mantine/core';
+import { Group, Text, Container, UnstyledButton, Divider } from '@mantine/core';
+import { Footer, Header, IndigenousAcknowledgement } from 'ala-mantine';
 import Link from 'next/link';
 
 export default function DemosLayout({ children }: { children: any }) {
   return (
     <>
-      <Container size="lg" py="lg">
+      <Header />
+      <Divider />
+      <Container size="xl" py="lg">
         <Group pb="md" justify="space-between">
           <UnstyledButton component={Link} href="/demos">
             <Text size="sm" c="grey">
@@ -13,9 +16,12 @@ export default function DemosLayout({ children }: { children: any }) {
           </UnstyledButton>
         </Group>
       </Container>
-      <Container size="lg" h="100%">
+      <Container size="xl" h="100%" mb="xl" pb="xl">
         {children}
       </Container>
+      <Divider />
+      <Footer />
+      <IndigenousAcknowledgement />
     </>
   );
 }
